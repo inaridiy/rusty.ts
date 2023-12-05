@@ -113,7 +113,7 @@ function safe<T>(promise: Promise<T>): Promise<Result<T, Error>>;
 function safe<T, A extends unknown[]>(fn: ((...args: A) => T) | Promise<T>, ...args: A): Awaitable<Result<T, Error>> {
   try {
     const val = typeof fn === "function" ? fn(...args) : fn;
-    return isPromiseLike(val) ? val.then(Ok, toError) : Ok(val);
+    return isPromiseLike(val) ? val.then(Ok, toError).catch(Err) : Ok(val);
   } catch (err) {
     return toError(err);
   }

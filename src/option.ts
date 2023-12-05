@@ -88,7 +88,7 @@ function safe<S>(promise: Promise<S>): Promise<Option<S>>;
 function safe<S, A extends unknown[]>(fn: ((...args: A) => S) | Promise<S>, ...args: A): Awaitable<Option<S>> {
   try {
     const val = typeof fn === "function" ? fn(...args) : fn;
-    return isPromiseLike(val) ? val.then(Some) : Some(val);
+    return isPromiseLike(val) ? val.then(Some).catch(() => None) : Some(val);
   } catch {
     return None;
   }
