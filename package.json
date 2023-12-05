@@ -1,6 +1,6 @@
 {
   "name": "@inaridiy/rusty.ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
@@ -22,7 +22,8 @@
   "exports": {
     ".": {
       "require": "./dist/index.umd.cjs",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
