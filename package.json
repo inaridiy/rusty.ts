@@ -1,25 +1,35 @@
 {
   "name": "rusty.ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "fmt": "biome fmt --write ./src",
-    "lint": "biome lint ./src",
-    "build": "vite build && tsc"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "inaridiy",
   "license": "MIT",
+  "keywords": [
+    "rust",
+    "result",
+    "monad",
+    "match",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inaridiy/rusty.ts"
+  },
   "exports": {
     ".": {
       "require": "./dist/index.umd.cjs",
       "import": "./dist/index.js"
     }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "biome fmt --write ./src",
+    "lint": "biome lint ./src",
+    "build": "vite build && tsc"
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
