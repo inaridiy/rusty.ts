@@ -1,0 +1,23 @@
+{
+  "name": "rusty.ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "biome fmt --write ./src",
+    "lint": "biome lint ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "@tsconfig/node18": "^2.0.0",
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/node": "^20.10.3",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.5"
+  }
+}
