@@ -2,15 +2,25 @@
   "name": "rusty.ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "fmt": "biome fmt --write ./src",
-    "lint": "biome lint ./src"
+    "lint": "biome lint ./src",
+    "build": "vite build && tsc"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/index.umd.cjs",
+      "import": "./dist/index.js"
+    }
+  },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
     "@tsconfig/node18": "^2.0.0",

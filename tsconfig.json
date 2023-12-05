@@ -1,3 +1,14 @@
 {
-    "extends": "@tsconfig/recommended"
+    "extends": "@tsconfig/recommended",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": "src",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+    },
+    "include": [
+        "src"
+    ],
 }
